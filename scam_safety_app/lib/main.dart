@@ -41,6 +41,7 @@ class _RootNavState extends State<RootNav> {
   Future<void> _initCallDetection() async {
     final service = CallDetectionServiceEnhanced();
     final granted = await service.requestPermissions();
+    if (!mounted) return;
     if (granted) {
       service.startListening(context);
     }

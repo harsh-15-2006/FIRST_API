@@ -32,7 +32,7 @@ Base = declarative_base()
 
 # ---- Gemini setup ----
 genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
-model = genai.GenerativeModel("gemini-2.0-flash")
+model = genai.GenerativeModel("gemini-3.1-flash-lite")
 
 # ---- Cloudinary setup ----
 cloudinary.config(
